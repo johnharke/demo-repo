@@ -1,6 +1,7 @@
 # cloudbuild.yaml
 # This configuration supports deployment to both development and production environments
 # with appropriate security controls and approval gates
+#added this line and a change to line 32
 
 steps:
   # Step 1: Run static code analysis and security scans
@@ -28,7 +29,7 @@ steps:
       - '-c'
       - |
         snyk auth $$SNYK_TOKEN
-        snyk test --severity-threshold=high
+        snyk test --severity-threshold=low
     secretEnv: ['SNYK_TOKEN']
 
   # Step 3: Build the application
