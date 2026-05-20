@@ -112,6 +112,6 @@ substitutions:
 # Trigger options
 options:
   logging: CLOUD_LOGGING_ONLY
-  dynamicSubstitutions: true
+  dynamicSubstitutions: false
   env:
     - 'NODE_ENV=$_NODE_ENV'
